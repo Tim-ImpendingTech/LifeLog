@@ -138,7 +138,7 @@ $scriptEndTime = Get-Date
 Add-Content -Path $logFile -Value "`n$logDivider END -----"
 Add-Content -Path $logFile -Value "End Time   : $($scriptEndTime.ToString('yyyy-MM-dd HH:mm:ss'))"
 Add-Content -Path $logFile -Value "Run Time   : $($stopwatch.Elapsed.ToString())"
-Add-Content -Path $logFile -Value "Pages Fetched : $($pageNumber-1) / $totalPages"
+Add-Content -Path $logFile -Value "Pages Fetched: $($pageNumber-1) / $totalPages"
 Add-Content -Path $logFile -Value "Successful Requests: $successfulRequests"
 Add-Content -Path $logFile -Value "Items Processed: $($allContents.Count)"
 Add-Content -Path $logFile -Value "Exit Reason: $exitReason"
