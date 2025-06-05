@@ -92,7 +92,9 @@ do {
                 } else {
                     $exitReason = "Max retries ($maxRetries) reached for 504 errors"
                     Add-Content -Path $logFile -Value "[$timestamp] $exitReason. Exiting."
-                    exit
+                    $cursor = $null    # stop outer loop
+                    $success = $true  # exit retry loop
+                    break
                 }
             } else {
                 $exitReason = "Unexpected error: $_"
